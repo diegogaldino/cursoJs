@@ -44,6 +44,21 @@ for (var i = 0; i <pacientes.length; i++) {
 	}
 
 }
+/* Evento de click no titulo passando como parametro uma função 
+titulo.addEventListener("click", mostraMensagem);
 
+function mostraMensagem(){
+	console.log("Clicou")
+}
+*/
 
+// passando uma função anonima
+ titulo.addEventListener("click", function(){
+ 	console.log("Clicou");
+ });
 
+var botaoAdicionar = document.querySelector("adicionar-paciente");
+
+botaoAdicionar.addEventListener("click", function(){
+
+});
