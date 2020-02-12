@@ -39,8 +39,8 @@ for (var i = 0; i <pacientes.length; i++) {
 
 
 	if (alturaValida&&pesoValido){
-		var imc = peso/(altura*altura);
-		tdImc.textContent=imc.toFixed(2);//toFixed limita casas decimais
+		var imc = calculaImc(peso,altura);
+		tdImc.textContent=imc;
 	}
 
 }
@@ -57,8 +57,8 @@ function mostraMensagem(){
  	console.log("Clicou");
  });
 
-var botaoAdicionar = document.querySelector("adicionar-paciente");
-
-botaoAdicionar.addEventListener("click", function(){
-
-});
+function calculaImc(peso,altura){
+	var imc=0;
+	imc = peso / (altura*altura);
+	return imc.toFixed(2);//toFixed limita casas decimais
+}
